@@ -5,3 +5,5 @@ Dataset link : https://drive.google.com/file/d/1Wce3RIccncm45jtZ7DEGIq6ulwI0Afdc
 The application uses a web interface, to access the web internface you run the flask enviroment by using the below code in the root directory of the project
 
 `python -m flask --app prediction run`
+
+You can use the `installed_packages.txt` file to install the required dependencies.
