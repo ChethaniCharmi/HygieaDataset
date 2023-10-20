@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Prediction model</title>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='prediction.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}" />
+
+</head>
+<body>
+
+	 <h1>Welcome to the Machine Learning Model Interface</h1>
+    <form action="/predict" method="post" enctype="multipart/form-data" id="upload-form">
+        <input type="file" id="imageInput" name="file" accept=".jpg, .png" class="btn btn-primary bg-dark text-white border none">
+        <br>
+        <input type="submit" value="Predict" class="btn btn-primary bg-dark text-white border none">
+
+        <br>
+
+        <!-- Image display area -->
+        <img id="uploadedImage" class="img-thumbnail img-fluid rounded mx-auto d-block">
+
+
+
+    </form>
+    <div id="predictions"></div>
+
+    <br>
+
+<script>
+
+
+    //JavaScript to handle image upload and display ----------------------------------------------------------
+    const imageInput = document.getElementById('imageInput');
+    const uploadedImage = document.getElementById('uploadedImage');
+
+    imageInput.addEventListener('change', function() {
+        const file = imageInput.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                uploadedImage.src = e.target.result;
+                uploadedImage.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+
+
+    document.getElementById('upload-form').addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent the form from submitting normally
+
+        // Create a FormData object to send the uploaded file
+        const formData = new FormData(this);
+
+        // Sending the file to the server for prediction
+        fetch('/predict', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            const predictions = data.predictions;
+            const predictedClass = data.predicted_class; // Get the predicted class
+
+            const predictionsDiv = document.getElementById('predictions');
+            predictionsDiv.innerHTML = '<h2>Predictions:</h2>';
+            
+            // Display the predicted class
+            predictionsDiv.innerHTML += `<p>Predicted Class: ${predictedClass}</p>`;
+            
+            // Display the probabilities for each class
+            predictions.forEach((probability, index) => {
+                predictionsDiv.innerHTML += `<p>Class ${index + 1}: ${probability}</p>`;
+            });
+        })
+        .catch(error => console.error(error));
+    });
+
+   
+
+</script>
+
+
+</body>
+</html>
