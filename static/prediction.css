@@ -1,0 +1,88 @@
+/*css document*/
+
+div.container{
+
+	margin-top: 5px;
+	max-height: 5px;
+}
+
+body {
+  background-image: url('prediction.jpg'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+}
+
+/* Define the styles for the container-header */
+#container-header {
+    background-color: ghostwhite; 
+    padding: 10px; 
+    display: flex;
+    align-items: center;
+}
+
+
+
+#logo {
+    background-image: url('logooo.png');
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 20px; 
+}
+
+
+/* Set the logout image as a background */
+#logout {
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    margin-left: auto; 
+}
+
+#container-body{
+  align-self: center;
+}
+
+
+.chooseFile {
+  width: 100px;
+  float: left;
+  margin-left: 100px;
+  font-size: 20px; 
+  margin-top: 15%;
+
+
+}
+
+
+.predictBtn {
+  width: 100px;
+  float: right;
+  margin-right: 450px;
+  font-size: 20px;
+  margin-top: 15%; 
+
+}
+
+
+
+#imagearea {
+
+    box-align: center;
+    border: solid;
+    width: 500px; 
+    height: 500px;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    margin-left: 35%; 
+    margin-top: 5px;
+}
+
+
+
+h1{
+  text-align: center;
+}
+
+
