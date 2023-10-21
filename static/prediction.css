@@ -1,0 +1,112 @@
+/*css document*/
+
+div.container{
+
+	margin-top: 5px;
+	max-height: 5px;
+}
+
+body {
+  background-color: #6D5D6E;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+}
+
+/* Define the styles for the container-header */
+#container-header {
+    background-color: #4F4557; 
+    padding: 10px; 
+    display: flex;
+    align-items: center;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+
+#logo {
+    background-image: url('logooo.png');
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 20px; 
+}
+
+
+logout.copyright {
+  float: right;
+  margin-right: 20px;
+ 
+}
+
+
+/* Set the logout image as a background */
+#logout {
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    margin-left: auto; 
+}
+
+#container-body{
+  align-self: center;
+}
+
+
+.chooseFile {
+  
+  float: left;
+  margin-left: 15px;
+  font-size: 20px; 
+  margin-top: 50px;
+
+
+}
+
+
+.predictBtn {
+  
+  margin-left: 15px;
+  font-size: 20px;
+  margin-top: 100px; 
+  padding-bottom: 50px;
+
+}
+
+
+
+#imagearea {
+
+    float: right;
+    box-align: center;
+    border: none;
+    width: 300px; 
+    height: 300px;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    margin-right: 8%; 
+    margin-top: 50px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+#prediction {
+  float: left;
+  margin-top: 200px;
+  padding-top: 100px;
+}
+
+
+#presize {
+
+    font-size: 30px;
+
+
+}
+
+
+h1{
+  text-align: center;
+}
+
+
