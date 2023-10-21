@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}" />
+
+
+</head>
+<body>
+
+	<div class="container pt-3 " id="container-1"  align="center" bg-dark text-white>
+		<div class="row justify-content-center " >
+			<div class="card w-50 ">
+				<div class="card-header bg-dark text-white">
+					<h2>Log in</h2>
+				</div>
+
+				<div class="card-body opacity 0.5">
+					<form method="post" action="/login">
+						<div class="form-group">
+							<input type="email" placeholder = "Enter your email..." name="email" id="email" class="form-control" required />
+						</div>
+
+						<div class="form-group">
+							<input type="password" placeholder = "Enter your password..." name="password" id="password" class="form-control" required />
+						</div>
+
+						<div class="form-group">
+							<input type="submit" name="" value="Login" class="btn btn-primary bg-dark text-white border none" />
+						</div>
+
+					</form>
+				</div>
+
+				<div class="card-footer" align="center">
+					<small>Click here to </small><a href="/register">Sign In</a>
+					<small> &copy; Chethani Charmi Jayanga </small>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
