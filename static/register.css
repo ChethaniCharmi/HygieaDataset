@@ -1,0 +1,14 @@
+/*css document*/
+
+div.container{
+
+	margin-top: 5px;
+	max-height: 5px;
+}
+
+body {
+  background-image: url('bg.jpg'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+}
